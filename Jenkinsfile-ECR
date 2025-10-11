@@ -25,7 +25,7 @@ pipeline{
             steps{
             gitCheckout(
                 branch: "main",
-                url: "https://github.com/DEVOPS-WITH-WEB-DEV/Java_App_Session2.git"
+                url: "https://github.com/Sangala632/Java_app_3.0.git"
             )
             }
         }
