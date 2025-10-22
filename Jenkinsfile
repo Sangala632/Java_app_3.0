@@ -11,6 +11,17 @@ pipeline {
     }
 
     stages {
+         stages {
+        stage('Jenkins Installation Script') {
+            when { expression { params.action == 'create' } }
+            steps {
+                script {
+                    echo "Executing Jenkins installation shell script..."
+                    sh 'chmod +x Jenkins_install.sh'
+                    sh './Jenkins_install.sh'
+                }
+            }
+        }
         stage('Git Checkout') {
             when { expression { params.action == 'create' } }
             steps {
