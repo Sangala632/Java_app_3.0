@@ -11,7 +11,6 @@ pipeline {
     }
 
     stages {
-         stages {
         stage('Jenkins Installation Script') {
             when { expression { params.action == 'create' } }
             steps {
@@ -21,7 +20,6 @@ pipeline {
                     sh './Jenkins_install.sh'
                 }
             }
-        }
         stage('Git Checkout') {
             when { expression { params.action == 'create' } }
             steps {
